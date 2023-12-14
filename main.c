@@ -83,6 +83,7 @@ void execute_command(const char *command, char *args[])
         exit(EXIT_FAILURE);
     }
 
+    {
     pid_t child_pid;
     int status;
 
@@ -110,7 +111,7 @@ void execute_command(const char *command, char *args[])
         free(command_path);
         return;
     }
-
+    }
     free(command_path);
 }
 
